@@ -117,5 +117,24 @@ namespace DynamicFluentBuilderTests
                 actual: model.SetByDefaultInBuilder);
         }
 
+        [TestMethod]
+        public void Build_WithCustomMethod()
+        {
+            var model = _builder
+                .WithBooleansOfValue(
+                    isTrue: true,
+                    booleanField: true)
+                .Build();
+
+            Assert.AreEqual(
+                expected: true,
+                actual: model.BooleanField);
+
+
+            Assert.AreEqual(
+                expected: true,
+                actual: model.IsTrue);
+        }
+
     }
 }

@@ -21,5 +21,15 @@ namespace DynamicFluentBuilderTests.Support.Builders
 
 
         public string SetByDefaultInBuilder = "Dynamic code is fun code.";
+
+        public FooBuilder WithBooleansOfValue(bool isTrue, bool booleanField)
+        {
+            dynamic me = this;
+
+            me.IsTrue(isTrue)
+              .BooleanField(booleanField);
+
+            return this;
+        }
     }
 }

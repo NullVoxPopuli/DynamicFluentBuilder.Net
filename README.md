@@ -1,6 +1,11 @@
 # DynamicFluentBuilder.Net [![Build Status](https://travis-ci.org/NullVoxPopuli/DynamicFluentBuilder.Net.svg)](https://travis-ci.org/NullVoxPopuli/DynamicFluentBuilder.Net) [![NuGet version](https://badge.fury.io/nu/DynamicFluentBuilder.svg)](http://badge.fury.io/nu/DynamicFluentBuilder)
 The Fluent Builder Pattern without all the manual work!
 
+### Installation
+
+    PM> Install-Package DynamicFluentBuilder
+
+
 ### Defining a Builder
 
 Given that a class, `foo` exists defined as:

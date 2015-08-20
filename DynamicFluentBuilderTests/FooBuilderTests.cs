@@ -1,10 +1,10 @@
 ﻿using System;
 using DynamicFluentBuilderTests.Support.Builders;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace DynamicFluentBuilderTests
 {
-    [TestClass]
+    [TestFixture]
     public class FooBuilderTests
     {
         private dynamic _builder;
@@ -15,7 +15,7 @@ namespace DynamicFluentBuilderTests
         }
 
 
-        [TestMethod]
+        [Test]
         public void Build_Succeeds()
         {
             var model = _builder.Build();
@@ -23,7 +23,7 @@ namespace DynamicFluentBuilderTests
             Assert.IsNotNull(model);
         }
 
-        [TestMethod]
+        [Test]
         public void Build_SetsConstructorDefaults()
         {
             var model = _builder.Build();
@@ -41,7 +41,7 @@ namespace DynamicFluentBuilderTests
                 actual: model.GetMessage());
         }
 
-        [TestMethod]
+        [Test]
         public void Build_SetsFieldDefaults()
         {
             var model = _builder.Build();
@@ -51,7 +51,7 @@ namespace DynamicFluentBuilderTests
                 actual: model.BooleanField);
         }
 
-        [TestMethod]
+        [Test]
         public void With_StringParameter()
         {
             var text = "hello world";
@@ -65,7 +65,7 @@ namespace DynamicFluentBuilderTests
                 actual: model.GetMessage());
         }
 
-        [TestMethod]
+        [Test]
         public void With_EachParameter()
         {
             var text = "hello there!";
@@ -91,7 +91,7 @@ namespace DynamicFluentBuilderTests
                 actual: model.GetMessage());
         }
 
-        [TestMethod]
+        [Test]
         public void With_NonConstructor()
         {
             var boolean = true;
@@ -105,7 +105,7 @@ namespace DynamicFluentBuilderTests
                 actual: model.BooleanField);
         }
 
-        [TestMethod]
+        [Test]
         public void Build_SetsDefaultViaBuilderDefinedDefault()
         {
             var model = _builder.Build();
@@ -117,7 +117,7 @@ namespace DynamicFluentBuilderTests
                 actual: model.SetByDefaultInBuilder);
         }
 
-        [TestMethod]
+        [Test]
         public void Build_WithCustomMethod()
         {
             var model = _builder

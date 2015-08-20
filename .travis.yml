@@ -1,8 +1,8 @@
 language: csharp
-solution: DynamicFluentBuilder.sln
+solution: DynamicFluentBuilder.Net.sln
 install:
-  - nuget restore DynamicFluentBuilder.sln
+  - nuget restore DynamicFluentBuilder.Net.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - xbuild /p:Configuration=Release DynamicFluentBuilder.sln
+  - xbuild /p:Configuration=Release DynamicFluentBuilder.Net.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./DynamicFluentBuilderTests/bin/Release/DynamicFluentBuilderTests.dll

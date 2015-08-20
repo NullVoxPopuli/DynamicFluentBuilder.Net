@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DynamicFluentBuilder</id>
+    <version>1.0.0</version>
+    <authors>Preston Sego</authors>
+    <owners>Preston Sego</owners>
+    <licenseUrl>https://github.com/NullVoxPopuli/DynamicFluentBuilder.Net/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/NullVoxPopuli/DynamicFluentBuilder.Net</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Fluent Builder Pattern without all the manual work.</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>Fluent Builder CSharp Dynamic Test</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>

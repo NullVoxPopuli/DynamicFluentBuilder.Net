@@ -28,7 +28,7 @@ A builder for `foo` may look something like this:
     public class FooBuilder : DynamicFluentBuilder<Foo>{}
 
 That's it!
-I like to put these is Support/Builders in my Test projects
+I like to put these in Support/Builders in my Test projects
 
 
 ### Usage
